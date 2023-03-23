@@ -28,8 +28,8 @@ def change(x, y):
 
 def changeFood():
     """Change food direction."""
-    foodAim.y = randrange(-10,10,10)
-    foodAim.x = randrange(-10,10,10) 
+    foodAim.x = randrange(-1,1)*10 
+    foodAim.y = randrange(-10,10)
 
 
 def inside(head):
@@ -50,8 +50,9 @@ def move():
 
     snake.append(head)
 
+    changeFood()
+
     if inside(food):
-        changeFood()
         food.move(foodAim)
 
     elif (food.x <= -180 or food.x >= 180): 
