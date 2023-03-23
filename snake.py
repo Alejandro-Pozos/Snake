@@ -70,17 +70,17 @@ def move():
     clear()
         
     for body in snake:
-        square(body.x, body.y, 9, colors[num_aleatorio])
+        square(body.x, body.y, 9, colors[num_aleatorio])    # se cambia el color deacuerdo con el numero random obtenido
 
-    square(food.x, food.y, 9, colors[num_aleatorio_dos])
+    square(food.x, food.y, 9, colors[num_aleatorio_dos])    # se cambia el color deacuerdo con el numero random obtenido
     update()
     ontimer(move, 100)
 
 
-colors = ['black','yellow','green','blue','magenta']
-num_aleatorio = random.randint(0, 4)
+colors = ['black','yellow','green','blue','magenta']  #creo un array de 5 colores
+num_aleatorio = random.randint(0, 4)        #funcion random para elegir un color del array de colors
 num_aleatorio_dos = random.randint(0, 4)
-while num_aleatorio ==num_aleatorio_dos :
+while num_aleatorio ==num_aleatorio_dos :       #se verifica que no se repitan colores 
     num_aleatorio_dos = random.randint(0, 4)
 setup(420, 420, 370, 0)
 hideturtle()
