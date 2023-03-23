@@ -28,8 +28,9 @@ def change(x, y):
 
 def changeFood():
     """Change food direction."""
-    foodAim.x = randrange(-1,1)*10 
-    foodAim.y = randrange(-10,10)
+    foodAim.x = randrange(-10,11,10)
+    foodAim.y = randrange(-10,11,10)
+    print(foodAim)
 
 
 def inside(head):
